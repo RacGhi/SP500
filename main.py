@@ -9,7 +9,7 @@ import yfinance as yf
 st.title('S&P 500 App')
 
 st.markdown("""
-This app retrieves the list of the **S&P 500** (from Wikipedia) and its corresponding **stock closing price** (year-to-date)!
+Cette application récupère la liste du ** S & P 500 ** (de Wikipedia) et le ** cours de clôture de l'action ** correspondant (depuis le début de l'année)!
 * **Python libraries:** base64, pandas, streamlit, numpy, matplotlib, seaborn
 * **Data source:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
 """)
@@ -35,7 +35,7 @@ selected_sector = st.sidebar.multiselect('Sector', sorted_sector_unique, sorted_
 # Filtering data
 df_selected_sector = df[ (df['GICS Sector'].isin(selected_sector)) ]
 
-st.header('Display Companies in Selected Sector')
+st.header('Afficher les entreprises dans le secteur sélectionné')
 st.write('Data Dimension: ' + str(df_selected_sector.shape[0]) + ' rows and ' + str(df_selected_sector.shape[1]) + ' columns.')
 st.dataframe(df_selected_sector)
 
@@ -74,9 +74,9 @@ def price_plot(symbol):
   plt.ylabel('Closing Price', fontweight='bold')
   return st.pyplot()
 
-num_company = st.sidebar.slider('Number of Companies', 1, 5)
+num_company = st.sidebar.slider('Nombre de compagnies', 1, 5)
 
-if st.button('Show Plots'):
-    st.header('Stock Closing Price')
+if st.button('Montrer les graphiques'):
+    st.header('Prix de cloture de l'action')
     for i in list(df_selected_sector.Symbol)[:num_company]:
         price_plot(i)
