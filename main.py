@@ -11,7 +11,7 @@ st.title('S&P 500 App')
 st.markdown("""
 Cette application récupère la liste du ** S & P 500 ** (de Wikipedia) et le ** cours de clôture de l'action ** correspondant (depuis le début de l'année)!
 * **Python libraries:** base64, pandas, streamlit, numpy, matplotlib, seaborn
-* **Data source:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
+* **Source des données:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
 """)
 
 st.sidebar.header("Fonctionnalités à entrer par l'utilisateur")
