@@ -80,3 +80,5 @@ if st.button('Montrer les graphiques'):
     st.header("Prix de cloture de l'action")
     for i in list(df_selected_sector.Symbol)[:num_company]:
         price_plot(i)
+        
+st.set_option('deprecation.showPyplotGlobalUse', False)
