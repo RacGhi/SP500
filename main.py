@@ -77,6 +77,6 @@ def price_plot(symbol):
 num_company = st.sidebar.slider('Nombre de compagnies', 1, 5)
 
 if st.button('Montrer les graphiques'):
-    st.header('Prix de cloture de l'action')
+    st.header("Prix de cloture de l'action")
     for i in list(df_selected_sector.Symbol)[:num_company]:
         price_plot(i)
