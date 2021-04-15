@@ -14,7 +14,7 @@ Cette application récupère la liste du ** S & P 500 ** (de Wikipedia) et le **
 * **Data source:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
 """)
 
-st.sidebar.header('User Input Features')
+st.sidebar.header("Fonctionnalités à entrer par l'utilisateur")
 
 # Web scraping of S&P 500 data
 #
